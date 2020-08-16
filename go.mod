@@ -1,4 +1,4 @@
-module gredis
+module github.com/chi3ndd/go-redis/v1
 
 go 1.14
 

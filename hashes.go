@@ -1,4 +1,4 @@
-package gredis
+package redis
 
 import (
 	"encoding/json"
