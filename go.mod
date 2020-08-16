@@ -1,4 +1,4 @@
-module redis
+module gredis
 
 go 1.14
 
