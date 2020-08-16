@@ -1,4 +1,4 @@
-module go-redis
+module redis
 
 go 1.14
 
