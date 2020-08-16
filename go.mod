@@ -1,4 +1,4 @@
-module github.com/chi3ndd/go-redis/v1
+module github.com/chi3ndd/go-redis
 
 go 1.14
 
