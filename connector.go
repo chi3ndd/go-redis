@@ -15,13 +15,13 @@ type (
 		Password string
 		Database int
 		client   *r.Client
-		logger   *logrus.Logger
+		Logger   *logrus.Logger
 	}
 )
 
 func (con *Connector) Initiation() error {
 	// Initiation logger
-	con.logger = &logrus.Logger{
+	con.Logger = &logrus.Logger{
 		Out:   os.Stderr,
 		Level: logrus.DebugLevel,
 		Formatter: &prefixed.TextFormatter{
@@ -38,7 +38,7 @@ func (con *Connector) Initiation() error {
 		DB:         con.Database,
 		MaxRetries: 5,
 	})
-	con.logger.Infof("Initializing connection to Redis server [%s] - database (%d)", con.Addr, con.Database)
+	con.Logger.Infof("Initializing connection to Redis server [%s] - database (%d)", con.Addr, con.Database)
 	// Success
 	return con.client.Ping().Err()
 }

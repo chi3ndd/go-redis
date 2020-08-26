@@ -10,7 +10,7 @@ func (con *Connector) LPush(key string, values ...interface{}) error {
 	if err != nil {
 		return err
 	}
-	con.logger.Infof("LPush - %d items", total)
+	con.Logger.Infof("LPush - %d items", total)
 	// Success
 	return nil
 }
@@ -35,7 +35,7 @@ func (con *Connector) RPush(key string, values ...interface{}) error {
 	if err != nil {
 		return err
 	}
-	con.logger.Infof("RPush - %d items", total)
+	con.Logger.Infof("RPush - %d items", total)
 	// Success
 	return nil
 }
